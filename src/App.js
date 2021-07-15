@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import logo from './logo.svg';
-import Counter from './components/Counter';
+import LoginForm from './components/LoginForm';
 
 const App = () => {
   return (
@@ -11,10 +11,7 @@ const App = () => {
       </div>
 
       <h1>Intranet Poudlard</h1>
-      <Counter label='Gryffondor' />
-      <Counter label='Serpentard' />
-      <Counter label='Poufsouffle' />
-      <Counter label='Serdaigle' />
+      <LoginForm />
     </div>
   );
 };

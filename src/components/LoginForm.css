@@ -1,0 +1,21 @@
+.loginForm {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.loginForm form {
+  flex-direction: column;
+  width: 200px;
+  border: 1px solid black;
+}
+
+
+input {
+  margin-bottom: 6px;
+  height: 24px;
+}
+
+.error {
+  color: rgb(243, 10, 10);
+}
