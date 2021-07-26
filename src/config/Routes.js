@@ -10,6 +10,7 @@ import {
 import Login from './../pages/Login';
 import Home from './../pages/Home';
 import Students from './../pages/Students';
+import Ranking from './../pages/Ranking';
 
 const PrivateRoute = (props) => {
   const isUserConnected = useCallback(() => {
@@ -36,6 +37,9 @@ const Routes = () => {
         </PrivateRoute>
         <PrivateRoute path='/students/:house'>
           <Students />
+        </PrivateRoute>
+        <PrivateRoute path='/ranking'>
+          <Ranking />
         </PrivateRoute>
       </Switch>
     </Router>

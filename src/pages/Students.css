@@ -1,0 +1,9 @@
+.Houses {
+  background-color: #61dafb;
+}
+.Houses .Link {
+  margin: 20px;
+  padding: 40px;
+  color: white;
+  font-size: 30px;
+}

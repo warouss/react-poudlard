@@ -7,7 +7,7 @@ const Counter = ({ label }) => {
 
   return (
     <div className='counter'>
-      <p>{label}</p>
+      <span className='house'>{label}</span>
       <p>{counter}</p>
       <button onClick={() => setCounter(counter - 1)}>-</button>
       <button onClick={() => setCounter(counter + 1)}>+</button>

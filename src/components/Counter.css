@@ -1,3 +1,18 @@
 .counter {
-  background-color: #b0e7b0;
+  justify-content: center;
+  background-color: #61dafb;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+.counter .house {
+  font-size: 30px;
+}
+
+.counter button {
+  border-radius: 8px;
+  font-size: 20px;
+  width: 80px;
+  margin: 10px;
 }

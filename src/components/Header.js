@@ -38,6 +38,10 @@ const Header = ({ label }) => {
               label='Maisons'
               onClick={() => handleLocation('/students/gryffindor')}
             ></MenuButton>
+            <MenuButton
+              label='Classement'
+              onClick={() => handleLocation('/ranking')}
+            ></MenuButton>
           </div>
           <div className='right-header'>
             <MenuButton label='Déconnexion' onClick={logout}></MenuButton>

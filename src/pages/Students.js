@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import Layout from './Layout';
+import './Students.css';
 
 const Students = () => {
   const { house } = useParams();
