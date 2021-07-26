@@ -1,27 +1,10 @@
-import React, { useEffect } from 'react';
-// import { useHistory } from 'react-router-dom';
+import React from 'react';
 import Header from '../components/Header';
 
-const Layout = ({ history, children }) => {
-  // const history = useHistory();
-
-  const checkToken = () => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      history.push('/home');
-    } else {
-      history.push('/');
-    }
-  };
-
-  useEffect(() => {
-    console.log('Layout.useEffect()');
-    checkToken();
-  }, []);
-
+const Layout = ({ children }) => {
   return (
     <div>
-      <Header history={history}></Header>
+      <Header></Header>
       {children}
     </div>
   );

@@ -67,7 +67,7 @@ const Login = () => {
   }, []);
 
   return (
-    <Layout history={history}>
+    <Layout>
       <LoginForm
         email={email}
         password={password}

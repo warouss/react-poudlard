@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import './Header.css';
 import logo from '../logo.svg';
 
-const Header = ({ label, history }) => {
+const Header = ({ label }) => {
   const [isToken, setIsToken] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     setIsToken(!!localStorage.getItem('token'));
