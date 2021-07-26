@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Header.css';
 import logo from '../logo.svg';
+import MenuButton from './MenuButton';
 
 const Header = ({ label }) => {
   const [isToken, setIsToken] = useState(false);
@@ -11,31 +12,36 @@ const Header = ({ label }) => {
     setIsToken(!!localStorage.getItem('token'));
   });
 
-  const logout = () => {
+  const logout = useCallback(() => {
     localStorage.removeItem('token');
     history.push('/');
-  };
+  });
+
+  const handleLocation = useCallback((location) => {
+    history.push(location);
+  });
 
   return (
-    <header className='App-header'>
-      <div className='left-header'>
+    <header>
+      <div className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        {label}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
+        <p>{label}</p>
       </div>
       {isToken ? (
-        <div className='right-header'>
-          <span onClick={logout}>Déconnexion</span>
+        <div className='menu'>
+          <div className='left-header'>
+            <MenuButton
+              label='Accueil'
+              onClick={() => handleLocation('/home')}
+            ></MenuButton>
+            <MenuButton
+              label='Maisons'
+              onClick={() => handleLocation('/students/gryffindor')}
+            ></MenuButton>
+          </div>
+          <div className='right-header'>
+            <MenuButton label='Déconnexion' onClick={logout}></MenuButton>
+          </div>
         </div>
       ) : null}
     </header>

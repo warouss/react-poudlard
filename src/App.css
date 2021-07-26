@@ -5,3 +5,12 @@
 .App-link {
   color: #61dafb;
 }
+
+.Houses {
+  background-color: #3b6e12;
+}
+.Houses .Link {
+  margin: 20px;
+  padding: 40px;
+  color: #61dafb;
+}

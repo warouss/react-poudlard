@@ -7,12 +7,23 @@
  
 .App-header {
   background-color: #282c34;
+  color: white;
   min-height: 100vh;
   min-height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 12px;
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.menu {
+  background-color: #2d313a;
+  font-size: calc(10px + 2vmin);
 }
 
 .left-header {
@@ -25,10 +36,4 @@
   display: flex;
   justify-content: flex-end;
   flex: 1;
-}
-
-.right-header span {
-  cursor: pointer;
-  color: #61dafb;
-  text-decoration: underline;
 }

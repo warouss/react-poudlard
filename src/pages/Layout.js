@@ -4,7 +4,7 @@ import Header from '../components/Header';
 const Layout = ({ children }) => {
   return (
     <div>
-      <Header></Header>
+      <Header label='Intranet Poudlard'></Header>
       {children}
     </div>
   );

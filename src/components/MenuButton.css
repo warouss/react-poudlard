@@ -1,0 +1,9 @@
+.menuButton {
+  margin: 10px;
+}
+
+.menuButton span {
+  cursor: pointer;
+  color: #61dafb;
+  text-decoration: underline;
+}
