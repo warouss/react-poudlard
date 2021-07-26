@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import LoginForm from './../components/LoginForm';
 import axios from 'axios';
+import LoginForm from './../components/LoginForm';
+import Layout from './Layout';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -66,7 +67,7 @@ const Login = () => {
   }, []);
 
   return (
-    <>
+    <Layout history={history}>
       <LoginForm
         email={email}
         password={password}
@@ -74,7 +75,7 @@ const Login = () => {
         onChange={onChange}
         onSubmit={onSubmit}
       ></LoginForm>
-    </>
+    </Layout>
   );
 };
 
