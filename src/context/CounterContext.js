@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from 'react'; // Create Context Object
 export const CounterContext = createContext(); // Create a provider for components to consume and subscribe to changes
+import { PropTypes } from 'prop-types';
 
 const initialState = {
   gryffindor: 0,
@@ -30,4 +31,8 @@ export const CounterContextProvider = (props) => {
       {props.children}
     </CounterContext.Provider>
   );
+};
+
+CounterContextProvider.propTypes = {
+  children: PropTypes.node,
 };

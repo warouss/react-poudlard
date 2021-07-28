@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './MenuButton.css';
 
-const MenuButton = ({ onClick, label }) => {
+const MenuButton = ({ label, onClick }) => {
   return (
     <>
       <div className='menuButton'>
@@ -13,7 +13,7 @@ const MenuButton = ({ onClick, label }) => {
 };
 
 MenuButton.propTypes = {
-  email: PropTypes.string,
+  label: PropTypes.string,
   onClick: PropTypes.func,
 };
 

@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './Header.css';
 import logo from '../logo.svg';
 import MenuButton from './MenuButton';
+import { PropTypes } from 'prop-types';
 
 const Header = ({ label }) => {
   const [isToken, setIsToken] = useState(false);
@@ -50,6 +51,10 @@ const Header = ({ label }) => {
       ) : null}
     </header>
   );
+};
+
+Header.propTypes = {
+  label: PropTypes.string,
 };
 
 export default Header;
