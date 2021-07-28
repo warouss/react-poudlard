@@ -8,10 +8,10 @@ const Home = () => {
     <Layout>
       <h1>Page accueil</h1>
       <div className='counters'>
-        <Counter label='Gryffindor'></Counter>
-        <Counter label='Slytherin'></Counter>
-        <Counter label='RavenClaw'></Counter>
-        <Counter label='Hufflepuff'></Counter>
+        <Counter label='gryffindor'></Counter>
+        <Counter label='slytherin'></Counter>
+        <Counter label='ravenClaw'></Counter>
+        <Counter label='hufflepuff'></Counter>
       </div>
     </Layout>
   );

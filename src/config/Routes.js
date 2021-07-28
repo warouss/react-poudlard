@@ -11,6 +11,7 @@ import Login from './../pages/Login';
 import Home from './../pages/Home';
 import Students from './../pages/Students';
 import Ranking from './../pages/Ranking';
+import { CounterContextProvider } from './../context/CounterContext';
 
 const PrivateRoute = (props) => {
   const isUserConnected = useCallback(() => {
@@ -27,22 +28,24 @@ const PrivateRoute = (props) => {
 
 const Routes = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Login />
-        </Route>
-        <PrivateRoute path='/home'>
-          <Home />
-        </PrivateRoute>
-        <PrivateRoute path='/students/:house'>
-          <Students />
-        </PrivateRoute>
-        <PrivateRoute path='/ranking'>
-          <Ranking />
-        </PrivateRoute>
-      </Switch>
-    </Router>
+    <CounterContextProvider>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Login />
+          </Route>
+          <PrivateRoute path='/home'>
+            <Home />
+          </PrivateRoute>
+          <PrivateRoute path='/students/:house'>
+            <Students />
+          </PrivateRoute>
+          <PrivateRoute path='/ranking'>
+            <Ranking />
+          </PrivateRoute>
+        </Switch>
+      </Router>
+    </CounterContextProvider>
   );
 };
 

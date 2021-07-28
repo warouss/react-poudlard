@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Layout from './Layout';
+import { CounterContext } from './../context/CounterContext';
 import './Ranking.css';
 
 const Ranking = () => {
+  const [state] = useContext(CounterContext);
   const [arrayCounter, setArrayCounter] = useState(null);
 
   const toArray = (obj) => {
@@ -10,7 +12,6 @@ const Ranking = () => {
     for (let house in obj) {
       sortable.push({ name: house, score: obj[house] });
     }
-
     setArrayCounter(
       sortable.sort((a, b) => {
         return b.score - a.score;
@@ -19,13 +20,7 @@ const Ranking = () => {
   };
 
   useEffect(() => {
-    const counterState = {
-      gryffindor: 10,
-      slytherin: 7,
-      ravenClaw: 5,
-      hufflepuff: 3,
-    };
-    toArray(counterState);
+    toArray(state);
   }, []);
 
   return (
