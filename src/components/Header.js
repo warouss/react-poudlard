@@ -43,6 +43,10 @@ const Header = ({ label }) => {
               label='Classement'
               onClick={() => handleLocation('/ranking')}
             ></MenuButton>
+            <MenuButton
+              label='Options'
+              onClick={() => handleLocation('/options')}
+            ></MenuButton>
           </div>
           <div className='right-header'>
             <MenuButton label='Déconnexion' onClick={logout}></MenuButton>
