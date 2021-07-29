@@ -1,0 +1,31 @@
+{
+  "translation": {
+    "header": {
+      "home": "Accueil",
+      "houses": "Maisons",
+      "ranking": "Classement",
+      "options": "Options",
+      "disconnect": "Deconnexion"
+    },
+    "home": {
+      "title": "Page d'accueil"
+    },
+    "houses": {
+      "title": "Elèves de la maison {{name}}" 
+    },
+    "ranking": {
+      "title": "Classement",
+      "house": "Maison",
+      "score": "Score"
+    },
+    "options": {
+      "title": "Options",
+      "themes": "Thèmes",
+      "clear": "Claire",
+      "dark": "Sombre",
+      "languages": "Langues",
+      "french": "Français",
+      "english": "Anglais"
+    }
+  }
+}

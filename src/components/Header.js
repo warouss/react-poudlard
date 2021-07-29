@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './Header.css';
 import logo from '../logo.svg';
 import MenuButton from './MenuButton';
@@ -8,6 +9,7 @@ import { PropTypes } from 'prop-types';
 const Header = ({ label }) => {
   const [isToken, setIsToken] = useState(false);
   const history = useHistory();
+  const { t } = useTranslation();
 
   useEffect(() => {
     setIsToken(!!localStorage.getItem('token'));
@@ -32,24 +34,27 @@ const Header = ({ label }) => {
         <div className='menu'>
           <div className='left-header'>
             <MenuButton
-              label='Accueil'
+              label={t('header.home')}
               onClick={() => handleLocation('/home')}
             ></MenuButton>
             <MenuButton
-              label='Maisons'
+              label={t('header.houses')}
               onClick={() => handleLocation('/students/gryffindor')}
             ></MenuButton>
             <MenuButton
-              label='Classement'
+              label={t('header.ranking')}
               onClick={() => handleLocation('/ranking')}
             ></MenuButton>
             <MenuButton
-              label='Options'
+              label={t('header.options')}
               onClick={() => handleLocation('/options')}
             ></MenuButton>
           </div>
           <div className='right-header'>
-            <MenuButton label='Déconnexion' onClick={logout}></MenuButton>
+            <MenuButton
+              label={t('header.disconnect')}
+              onClick={logout}
+            ></MenuButton>
           </div>
         </div>
       ) : null}

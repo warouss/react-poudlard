@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 import Layout from './Layout';
 import './Students.css';
 
 const Students = () => {
   const { house } = useParams();
   const [students, setStudents] = useState([]);
+  const { t } = useTranslation();
 
   const getStudents = useCallback(() => {
     console.log('getStudents fror house : ', house);
@@ -22,6 +24,10 @@ const Students = () => {
         console.error(err);
       });
   });
+
+  const capitalize = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   useEffect(() => {
     getStudents();
@@ -43,7 +49,7 @@ const Students = () => {
           Hufflepuff
         </Link>
       </div>
-      <h1>Elèves de la maison {house}</h1>
+      <h1>{t('houses.title', { name: capitalize(house) })}</h1>
       {students ? (
         students.map((student) => <p key={student.name}>{student.name}</p>)
       ) : (
